@@ -1,5 +1,4 @@
-
-```
+```markdown
 # Portfolio of Fernando Lin
 
 Welcome to my personal portfolio repository! 🌟 
@@ -24,17 +23,17 @@ This portfolio serves as a hub to display:
 ## Usage
 
 1. Clone the repository:
-   ```
-   git clone https://github.com/fernandolin/portfo.git
-   cd portfo
+   ```bash
+   git clone https://github.com/fernandolin/my-portfolio.git
+   cd my-portfolio
    ```
 2. Install dependencies:
-   ```
+   ```bash
    pip install -r requirements.txt
    ```
 3. Run the application:
-   ```
-   python main.py
+   ```bash
+   python app.py
    ```
 4. Open your browser and visit:
    ```
