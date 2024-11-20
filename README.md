@@ -1,4 +1,4 @@
-```markdown
+
 # Portfolio of Fernando Lin
 
 Welcome to my personal portfolio repository! 🌟 
@@ -23,16 +23,16 @@ This portfolio serves as a hub to display:
 ## Usage
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/fernandolin/my-portfolio.git
    cd my-portfolio
    ```
 2. Install dependencies:
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 3. Run the application:
-   ```bash
+   ```
    python app.py
    ```
 4. Open your browser and visit:
@@ -52,10 +52,4 @@ This repository is open-source and available under the [MIT License](LICENSE).
 
 **Fernando Lin**  
 [GitHub](https://github.com/fernandolin) | [LinkedIn](#) | [Portfolio Website](#)
-```
 
-### Key Points:
-- It provides an overview of what the project is and its purpose.
-- Includes steps to set up and run the project locally.
-- Encourages contact and collaboration.
-- Customizable links to GitHub, LinkedIn, or any portfolio-related content.
