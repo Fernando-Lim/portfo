@@ -1,7 +1,8 @@
 # routes.py
 
 from flask import Blueprint, render_template, request, redirect
-from .services import write_to_file, write_to_csv
+from .services import send_email
+import os
 
 # Create a Blueprint for routes
 main = Blueprint('main', __name__)
@@ -18,7 +19,7 @@ def page(page_name):
 def submit_form():
     if request.method == 'POST':
         data = request.form.to_dict()
-        write_to_csv(data)
+        send_email(data)
         return redirect('/thankyou.html')
     else:
         return 'Something went wrong, please try again.'
