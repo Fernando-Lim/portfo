@@ -55,16 +55,16 @@ def send_email(data):
 def generate_mailto_link(data):
     try:
         # Extract data from input
-        recipient_email = data["Email"]
         subject = data["Subject"]
         message = data["Message"]
+        my_email = os.getenv('MAIL_DEFAULT_SENDER')
 
         # Encode the subject and message
         subject_encoded = urllib.parse.quote(subject)
         message_encoded = urllib.parse.quote(message)
 
         # Create mailto link
-        mailto_link = f"mailto:{recipient_email}?subject={subject_encoded}&body={message_encoded}"
+        mailto_link = f"mailto:{my_email}?subject={subject_encoded}&body={message_encoded}"
 
         return mailto_link
 
