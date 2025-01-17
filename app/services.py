@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import urllib.parse
 
 # Load environment variables
 load_dotenv()
@@ -50,3 +51,22 @@ def send_email(data):
 
     except Exception as e:
         print(f"Failed to send email: {e}")
+
+def generate_mailto_link(data):
+    try:
+        # Extract data from input
+        recipient_email = data["Email"]
+        subject = data["Subject"]
+        message = data["Message"]
+
+        # Encode the subject and message
+        subject_encoded = urllib.parse.quote(subject)
+        message_encoded = urllib.parse.quote(message)
+
+        # Create mailto link
+        mailto_link = f"mailto:{recipient_email}?subject={subject_encoded}&body={message_encoded}"
+
+        return mailto_link
+
+    except Exception as e:
+        return None

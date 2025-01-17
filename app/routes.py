@@ -1,7 +1,7 @@
 # routes.py
 
 from flask import Blueprint, render_template, request, redirect
-from .services import send_email
+from .services import send_email, generate_mailto_link
 import os
 
 # Create a Blueprint for routes
@@ -19,7 +19,10 @@ def page(page_name):
 def submit_form():
     if request.method == 'POST':
         data = request.form.to_dict()
-        send_email(data)
-        return redirect('/thankyou.html')
+        mailto_link = generate_mailto_link(data)
+        if mailto_link:
+            return redirect(mailto_link)
+        else:
+            return 'Something went wrong, please try again.'
     else:
         return 'Something went wrong, please try again.'

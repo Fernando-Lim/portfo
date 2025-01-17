@@ -58,7 +58,7 @@
           
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-               <form action="/submit_form" method="POST" class="reveal-content">
+               <form id="contactForm" action="/submit_form" method="POST" class="reveal-content">
                   <div class="row">
                     <div class="col-md-7">
                       <div class="form-group">
@@ -130,6 +130,14 @@
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
      navActivePage();
+  });
+</script>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    setTimeout(() => {
+      event.target.reset(); // Clear the form inputs
+    }, 1000); // Delay form reset for 1 second
   });
 </script>
 
