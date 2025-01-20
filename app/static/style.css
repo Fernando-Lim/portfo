@@ -3814,9 +3814,16 @@ body.minimal{
 }
 .hero-full-container h1{
     font-family:Roboto,Helvetica,Arial,sans-serif;
-    font-size: 3.5em;
+    font-size: 6em;
     font-weight:900
 }
+
+@media (max-width: 767px) {
+    .hero-full-container h1 {
+        font-size: 3.5em; /* Font size for mobile devices */
+    }
+}
+
 .hero-full-container .hero-full-wrapper{
     display:table;
     width:100%;
